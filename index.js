@@ -1,13 +1,22 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // return word === word.split("").reverse().join("");
+  const toArray = word.split("");
+  const array = [];
+  toArray.forEach((char) => array.unshift(char));
+  const newWord = array.join("");
+  return word === newWord;
 }
 
 /* 
-  Add your pseudocode here
+  + split input word into an array of characters
+  + reverse the array so that the letters are now backwards
+  + join the reversed array so that it is a string again
+  + check if the original word is the same asthe reversed version
 */
 
 /*
-  Add written explanation of your solution here
+  checked if the passed-in word is the same as the reversed version of that word, and
+  returned the result of the comparison
 */
 
 // You can run `node index.js` to view these console logs
